@@ -1,6 +1,6 @@
-# TPAK Packer — архиватор `.pak` для Star Conflict
+# TPAK Packer — архиватор `.pak` (TPAK v7)
 
-Упаковщик и распаковщик архивов Star Conflict `.pak` (TPAK v7) с интерфейсом
+Упаковщик и распаковщик архивов `.pak` (TPAK v7) с интерфейсом
 с двухпанельным интерфейсом и отдельным обработчиком архива без GUI. Формат реализован
 самостоятельно, без сторонних библиотек.
 
@@ -38,11 +38,11 @@
 ```python
 from pak_handler import PakArchive
 
-h = PakArchive().open("data/models_ships_race_1.pak")
+h = PakArchive().open("archive.pak")
 for e in h.entries():
     print(e["name"], e["size"])
 
-h.extract(["models\\ships\\race_1\\r1_s_t1.mdl-hdr"], "out")
+h.extract(["folder/file.txt"], "out")
 h.add_file("new.txt")
 h.save()          # рядом с исходником появится .bak
 h.test()          # список проблем (пусто = архив читается целиком)
@@ -156,5 +156,5 @@ python -m unittest discover -s tests -v
 
 MIT — см. [LICENSE](LICENSE).
 
-Неофициальный общественный инструмент, не связан с Targem Games и
-разработчиками Star Conflict. Ассеты игры в проект не входят.
+Неофициальный общественный инструмент, не связан с разработчиками игры.
+Ассеты игры в проект не входят.

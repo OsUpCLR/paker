@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""TPAK Packer — Two-pane GUI for Star Conflict .pak archives.
+"""TPAK Packer — Two-pane GUI for TPAK v7 .pak archives.
 
 Run:  python pak_gui.py [archive.pak]
 """
@@ -14,7 +14,7 @@ from pak_handler import PakArchive, PakError, human_size
 
 APP = "TPAK Packer"
 VERSION = "2.0"
-FILETYPES = [("Star Conflict pak", "*.pak"), ("All files", "*.*")]
+FILETYPES = [("TPAK archive (*.pak)", "*.pak"), ("All files", "*.*")]
 
 
 def res_path(*parts):
@@ -659,7 +659,7 @@ class App(tk.Tk):
         self.destroy()
 
     def about(self):
-        messagebox.showinfo(APP, L("%s %s\n\nУпаковщик и распаковщик .pak Star Conflict (TPAK v7).\nДвойной клик — просмотр файла, Del — удалить, F2 — переименовать.")
+        messagebox.showinfo(APP, L("%s %s\n\nУпаковщик и распаковщик .pak (TPAK v7).\nДвойной клик — просмотр файла, Del — удалить, F2 — переименовать.")
                             % (APP, VERSION), parent=self)
 
 

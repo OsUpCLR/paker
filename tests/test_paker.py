@@ -13,8 +13,8 @@ class HandlerTests(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.mkdtemp(prefix="paker_")
         self.src = os.path.join(self.dir, "src")
-        os.makedirs(os.path.join(self.src, "models", "ships", "x"))
-        with open(os.path.join(self.src, "models", "ships", "x", "a.mdl-msh000"), "wb") as fh:
+        os.makedirs(os.path.join(self.src, "folder", "sub"))
+        with open(os.path.join(self.src, "folder", "sub", "a.bin"), "wb") as fh:
             fh.write(b"A" * 5000)
         with open(os.path.join(self.src, "readme.txt"), "wb") as fh:
             fh.write(b"hello paker")
@@ -31,8 +31,8 @@ class HandlerTests(unittest.TestCase):
         h = self._build()
         try:
             names = sorted(e["name"] for e in h.entries())
-            self.assertEqual(names, ["models\\ships\\x\\a.mdl-msh000", "readme.txt"])
-            self.assertIn("models\\ships\\x", h.folders())
+            self.assertEqual(names, ["folder\\sub\\a.bin", "readme.txt"])
+            self.assertIn("folder\\sub", h.folders())
             self.assertFalse(h.dirty)
         finally:
             h.close()
@@ -55,7 +55,7 @@ class HandlerTests(unittest.TestCase):
         try:
             h.add_bytes("new\\file.bin", b"12345")
             h.rename("readme.txt", "docs\\readme.txt")
-            h.delete(["models\\ships\\x\\a.mdl-msh000"])
+            h.delete(["folder\\sub\\a.bin"])
             self.assertTrue(h.dirty)
             h.save()
             h.open(self.pak)

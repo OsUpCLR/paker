@@ -1,6 +1,6 @@
-# TPAK Packer — `.pak` archiver for Star Conflict
+# TPAK Packer — `.pak` archiver (TPAK v7)
 
-Pack and unpack Star Conflict `.pak` archives (TPAK v7) with a two-pane GUI
+Pack and unpack `.pak` archives (TPAK v7) with a two-pane GUI
 and a separate, GUI-free archive handler. The format is implemented from
 scratch — no third-party libraries.
 
@@ -38,11 +38,11 @@ Changes (add, delete, rename) are accumulated in memory and written only by
 ```python
 from pak_handler import PakArchive
 
-h = PakArchive().open("data/models_ships_race_1.pak")
+h = PakArchive().open("archive.pak")
 for e in h.entries():
     print(e["name"], e["size"])
 
-h.extract(["models\\ships\\race_1\\r1_s_t1.mdl-hdr"], "out")
+h.extract(["folder/file.txt"], "out")
 h.add_file("new.txt")
 h.save()          # writes a .bak next to the original
 h.test()          # list of problems (empty = the archive reads fine)
@@ -155,5 +155,5 @@ python -m unittest discover -s tests -v
 
 MIT — see [LICENSE](LICENSE).
 
-This is an unofficial community tool, not affiliated with Targem Games or the
-Star Conflict developers. Game assets are not distributed with this project.
+This is an unofficial community tool, not affiliated with the game developers.
+Game assets are not distributed with this project.

@@ -15,11 +15,11 @@ EN = "en"
 TRANSLATIONS = {
     "Архив: %s\nФайлов: %d\nРазмер: %s\nУпаковано: %s\nВерсия формата: %s\nИзменения: %s":
         "Archive: %s\nFiles: %d\nSize: %s\nPacked: %s\nFormat version: %s\nChanges: %s",
-    "%s %s\n\nУпаковщик и распаковщик .pak Star Conflict (TPAK v7).\nДвойной клик — просмотр файла, Del — удалить, F2 — переименовать.":
-        "%s %s\n\nPacker and unpacker for Star Conflict .pak files (TPAK v7).\nDouble-click to preview, Del to delete, F2 to rename.",
+    "%s %s\n\nУпаковщик и распаковщик .pak (TPAK v7).\nДвойной клик — просмотр файла, Del — удалить, F2 — переименовать.":
+        "%s %s\n\nPacker and unpacker for .pak files (TPAK v7).\nDouble-click to preview, Del to delete, F2 to rename.",
     "  (есть изменения)": "  (modified)",
-    "%s %s\n\nУпаковщик и распаковщик .pak Star Conflict (TPAK v7).\n":
-        "%s %s\n\nPacker and unpacker for Star Conflict .pak files (TPAK v7).\n",
+    "%s %s\n\nУпаковщик и распаковщик .pak (TPAK v7).\n":
+        "%s %s\n\nPacker and unpacker for .pak files (TPAK v7).\n",
     "(новый архив)": "(new archive)",
     "(новый)": "(new)",
     "<архив>": "<archive>",

@@ -151,6 +151,20 @@ from `data/` on top of the paks.
 python -m unittest discover -s tests -v
 ```
 
+## Educational purpose and disclaimer
+
+This project was created **for educational purposes** — to study and document
+the TPAK v7 container format and to practise building a two-pane GUI archiver.
+
+The software is provided **"as is", without warranty of any kind**, express or
+implied. The authors are **not responsible** for any damage, data loss,
+corrupted or unreadable archives, game or account restrictions, or any other
+consequences of using it. Always keep backups of the archives you modify.
+
+Do not use this tool to violate the rights of the game developers, to
+distribute modified game content, or to bypass licensing. Use it only with
+files you legally own and at your own risk.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
